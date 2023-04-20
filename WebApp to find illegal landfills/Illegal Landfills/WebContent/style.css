@@ -1,0 +1,428 @@
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+.legenda {position:fixed;
+	text-align: left;
+	font-size:18px;
+	top: 200px;
+	left: 1325px;
+	}
+#verde {
+
+	background-color: #00ff00;
+
+	
+}
+#giallo {
+	
+	background-color: #ffff00;
+
+}
+#rosso {
+
+	background-color: #ff0000;
+
+	}
+	
+#cambioImgDiv {
+display:none;
+}
+.label { display: inline-block;
+    float: left;
+    clear: left;
+    width: 200px;
+    text-align: left;
+    font-style: italic;}
+   
+    input[name=newLatitudine],  
+    input[name=newLongitudine], 
+    input[name=newNomeLocalita], 
+    input[name=newComune],
+    input[name=newRegione] {
+    display: inline-block;
+  float: left;
+    }
+
+#aggiungiLocalita {
+	text-align: left;
+	padding-top: 0;
+	
+}
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+/* Dropdown Button */
+.scegliLocalita {
+	background-color: #3498DB;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+.mapLavoratore{
+	left: 700px !important;
+}
+#mapid {
+	position: fixed;
+	border: 1px solid #0c0;
+	width: 700px;
+	height: 500px;
+	left: 600px;
+	top: 160px;
+	box-sizing: border-box;
+}
+#clickable {
+	position: fixed;
+	border: 1px solid #0c0;
+	left: 1000px;
+	top: 100px;
+		box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}
+#p1 {
+	
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	border: 1px solid #888;
+	overflow: auto; /* Enable scroll if needed */
+	background-color: #fefefe;
+	width: 585px;
+	height: 400px;
+	left: 650px;
+	top: 210px;
+	padding-left: 10px;
+	text-align: left;
+	font-size: 18px;
+	
+}
+.listaLocalitaImmagini{
+	
+	text-align: left;
+	font-size: 16px;
+	background-color:#F7FAFA;
+	color: #3d464d;
+	font-weight: normal;
+	width:400px;
+  margin: 50px;
+	
+}
+
+.dettagliLocalita{
+	font-size: 17px;
+	background-color:#D2EEF0;
+	
+}
+
+/* Dropdown button on hover & focus */
+.scegliLocalita:hover, .scegliLocalita:focus {
+	background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.localita {
+	position: relative;
+	display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.listaLocalita {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.listaLocalita a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+/* Change color of dropdown links on hover */
+.listaLocalita a:hover {
+	background-color: #ddd
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+	display: block;
+}
+
+.passo {
+	display: none; /* Hidden by default */
+}
+.elencoImmagini {
+	display: none; /* Hidden by default */
+	z-index: 1;
+	margin-top:90px;
+
+	background-color: #fefefe;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 500px;
+	min-height: 600px;
+	left:10px;
+	font-size: 18px;
+	overflow:auto; /* Enable scroll if needed */}
+	
+.informazioni  {
+	display: none; /* Hidden by default */
+position:fixed;
+	z-index: 1;
+	top:30%;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 40%;
+	left:30%;
+	font-size: 18px;
+	overflow:auto;
+	max-height:50%;
+}
+.wizard{
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 200px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+#wizardButton {
+position: fixed;
+	left: 800px;
+	top: 100px;
+		box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.wizardContent {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 40%;
+	font-size: 19px;
+}
+
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus,  {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.masked {
+	display: none;
+}
+
+.displayed {
+	display: block;
+}
+
+.dettagliCampagna{
+	padding-top: 50px;
+	padding-left: 50px;
+	text-align: left;
+	font-size: 20px;
+	color: #3d464d;
+	font-weight: normal;
+	width: 180px;
+}
+
+.navigation {
+  width: 100%;
+  background-color: black;
+}
+
+
+.logout {
+  font-size: .8em;
+  font-family: 'Oswald', sans-serif;
+	position: relative;
+  right: -18px;
+  bottom: -4px;
+  overflow: hidden;
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity .45s;
+  -webkit-transition: opacity .35s;
+  
+}
+
+.buttonLogout {
+	text-decoration: none;
+	float: right;
+  padding: 12px;
+  margin: 15px;
+  color: white;
+  width: 25px;
+  background-color: black;
+  transition: width .35s;
+  -webkit-transition: width .35s;
+  overflow: hidden
+}
+
+a:hover {
+  width: 100px;
+}
+
+a:hover .logout{
+  opacity: .9;
+}
+
+a {
+  text-decoration: none;
+}
+
+.messaggioErrore{
+	padding-top: 60px;
+	padding-left:20px;
+	text-align: left;
+	font-size: 20px;
+	color: #3d464d;
+	font-weight: bold;
+}
+
+.messaggioIniziale {
+	padding-top: 100px;
+	text-align: center;
+	font-size: 20px;
+	color: #3d464d;
+	font-weight: normal;
+}
+
+.contentHomeManager {
+	text-align: center;
+	font-size: 20px;
+	color: #3d464d;
+	font-weight: normal;
+}
+
+#campagneDaScegliere{
+	background-color:#F6D7F9;
+}
+
+.listaCampagne {
+	text-align: center;
+	font-size: 20px;
+	color: #3d464d;
+	font-weight: normal;
+	
+}
+#campagneScelte{background-color:#99CCB3;}
+.formCampagna {	
+	text-align: center;
+	font-size: 20px;
+	color: #3d464d;
+	font-weight: normal;}
+	
+.formIniziale {
+	padding-top: 126px;
+	text-align: center;
+	font-size: 20px;
+	color: #3d464d;
+	font-weight: normal;
+}
+
+.selezioneLocalita{
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#f6f6f6;
+	display:inline-block;
+	border:none;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+		padding:6px 24px;
+		text-align: justify;
+	text-decoration:none;
+		min-width: 160px;
+	}
+
+#annulla, #chiudiInfo, #chiudiInfoLavoratore {
+		box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+		padding:6px 24px;
+	text-decoration:none;
+margin-left: 80%;	
+}
+.formDiv {
+	display: none;
+}
+input[type=submit], input[type=file], #cambiaImg, .aggiungiAnnotazione, #tornaIndietro, #submitNewLocalita, #prossimoPassoButton, #submitNewImmagine, #risolviConflitto {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}
+input[type=submit]:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+input[type=submit]:active {
+	position:relative;
+	top:1px;
+}
+
+

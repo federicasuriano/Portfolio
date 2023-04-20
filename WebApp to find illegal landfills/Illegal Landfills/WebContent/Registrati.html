@@ -1,0 +1,48 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Registrati!</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	<div class="formIniziale">
+
+	<form onsubmit="return check()" name="registrazione" action="./registrazione"  method="post">
+
+	
+	
+			Nome Utente <br>
+			<input type="text" name="nome_utente" required/><br> <br>
+			
+		Email<br>
+			<input type="email" name="email" required/><br> <br>
+			
+			Password <br>
+			<input type="password" name="password" required/> <br> <br>
+			
+			Ruolo <br>
+				 <input type="radio" name="ruolo" value="manager" checked> Manager
+				<br>
+				<input type="radio" name="ruolo" value="lavoratore"> Lavoratore
+				<br><br>
+		<input type="submit" value="Submit" />
+		
+	</form>
+		<br>
+		<a href="./Login.html">Sei già iscritto? Fai il login!</a>
+	</div>
+</body>
+</html>
+
+<script> function check() {
+var x= document.forms["registrazione"]["nome_utente"].value;
+if (x=="" || x.length < 3 || x.length> 20) {alert("Username non ben formato"); return false;}
+for (var i=0; i< x.length; i++) {if (x.charAt(i)==" ") {alert("Username non ben formato - non si possono inserire spazi"); return false;}}
+
+var z= document.forms["registrazione"]["password"].value;
+if (z=="" || z.length < 3 || z.length> 20) {alert("Password non ben formata"); return false;}
+for (var i=0; i< z.length; i++) {if (z.charAt(i)==" ") {alert("Password non ben formata - non si possono inserire spazi"); return false;}}
+	return true; }</script>
