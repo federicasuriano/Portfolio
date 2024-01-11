@@ -1,5 +1,8 @@
 # Portfolio
 
+- FORMAL METHODS IN ACTION:
+Using runtime verification to automatically address occurrences of labor exploitation crimes. [Master Thesis]
+
 - DREAM (Data-dRiven PrEdictive FArMing) in Telangana:
 Requirements analysis and specication document (RASD) and Design document (DD) of an initiative presented by UNDP India, a United Nations division and within the Healthsites initiative.
 
